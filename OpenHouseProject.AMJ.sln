@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenHouseProject.AMJ", "OpenHouseProject.AMJ\OpenHouseProject.AMJ.csproj", "{E690D988-56FD-4016-B81A-D7E05B7AE7EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E690D988-56FD-4016-B81A-D7E05B7AE7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E690D988-56FD-4016-B81A-D7E05B7AE7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E690D988-56FD-4016-B81A-D7E05B7AE7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E690D988-56FD-4016-B81A-D7E05B7AE7EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89A2C389-6461-4172-97D1-1852C9F50885}
+	EndGlobalSection
+EndGlobal
