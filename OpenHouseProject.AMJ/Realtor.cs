@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OpenHouseProject.AMJ
 {
     class Realtor
     {
+        //private object homeTheONE;
+
         public string Name { get; set; }
 
 
@@ -33,7 +33,7 @@ namespace OpenHouseProject.AMJ
 
         public Home GetNextHouse()
         {
-            if (Home.HomeList.Count == 1)
+            if (Home.HomeList.Count == 0)
             {
                 return null;
             }
@@ -41,9 +41,12 @@ namespace OpenHouseProject.AMJ
             //display list
             Speak("Choose a home from the list. ");
 
+
             for (int i = 0; i < Home.HomeList.Count; i++)
             {
-                Speak(i+1 + ") " + Home.HomeList[i].HomeName);
+                
+                Speak(i + ") " + Home.HomeList[i].HomeName);
+               
             }
 
             //get user feedback 
@@ -51,10 +54,10 @@ namespace OpenHouseProject.AMJ
             int answerBuyerResponse = int.Parse(buyerResponse);
 
             Home ChosenHome = Home.HomeList[answerBuyerResponse];
-
             //Remove selection from the list
             Home.HomeList.RemoveAt(answerBuyerResponse);
 
+            
             return ChosenHome;
         }
         

@@ -1,5 +1,8 @@
 ﻿using System;
 
+
+
+
 namespace OpenHouseProject.AMJ
 {
     class Program
@@ -41,12 +44,12 @@ namespace OpenHouseProject.AMJ
             homeFive.BuyThisHomeResponse = "Unfortuantely, this one has major structural issues! Keep looking!";
             Home.HomeList.Add(homeFive);
 
-            //Home homeTheONE = new Home();
-            //homeTheONE.HomeName = "The Abandoned Split Level Filled with Australian Vampires";
-            //homeTheONE.HouseDescription = "This House has a beautiful fence to contain all of your CRAZY relatives. It doesn't come with a mancave but it does have a man in the basement. The previous owners were Do It Yourselfers! The highend gas stove is already installed and conveniently located on the master bed.";
-            //homeTheONE.BestHouseFeature = "The master toilet is located on the ceiling. It is an very popular trend in new construction!";
-            //homeTheONE.BuyThisHomeResponse = "The asking price is $390,000.";
-            //Home.HomeList.Add(homeTheONE);
+
+            string finalHouseName = "The Abandoned Split Level Filled with Australian Vampires";
+            string finalHouseDescription = "It has a beautiful fence to contain all of your CRAZY relatives. It doesn't come with a mancave but it does have a man in the basement. The previous owners were Do It Yourselfers! The highend gas stove is already installed and conveniently located on the master bed.";
+            string finalBestHouseFeature = "the master toilet is located on the ceiling. It is an very popular trend in new construction!";
+            string finalBuyThisHomeResponse = "Congratualtions the asking price was $390,000 and we just put it undercontract for you at 3.9 Billion! What a steal! ";
+
 
             Realtor realtor = new Realtor();
             realtor.Name = "David";
@@ -55,11 +58,35 @@ namespace OpenHouseProject.AMJ
 
             //Show list of homes to see
             realtor.ShowHomes();
-            Console.WriteLine("I really think this is the house that you have been looking for after 399 months of house hunting. Do you want to see it?");
-            Console.ReadLine();
+            
+            Console.WriteLine("I really think this is the house that you have been looking for after 399 months of house hunting. Do you want to see it? Y or N");
+
+
+            string finalChoiceResponse1 = Console.ReadLine();
+            string finalChoice = finalChoiceResponse1.ToUpper();
+
+            if (finalChoice == "Y")
+            {
+                realtor.Speak("This house is called the " + finalHouseName + finalHouseDescription + "It's best feature is " + finalBestHouseFeature + " " + finalBuyThisHomeResponse);
+            }
+            else
+            {
+                realtor.Speak("Too bad, your going to look at this house because I need a sale! This house is called the " + finalHouseName + finalHouseDescription + "It's best feature is " + finalBestHouseFeature + " " + finalBuyThisHomeResponse);
+            }
+
+            realtor.Speak("I made a video of your home buying experience. Take a look?");
+
+            string url = "https://youtu.be/Ntz8KxCxgGQ";
+            System.Diagnostics.Process.Start(url);
 
             
             
+            
         }
+
+           
     }
+    
 }
+    
+
