@@ -45,13 +45,13 @@ namespace OpenHouseProject.AMJ
             for (int i = 0; i < Home.HomeList.Count; i++)
             {
                 
-                Speak(i + ") " + Home.HomeList[i].HomeName);
+                Speak(i+1 + ") " + Home.HomeList[i].HomeName);
                
             }
 
             //get user feedback 
             string buyerResponse = Console.ReadLine();
-            int answerBuyerResponse = int.Parse(buyerResponse);
+            int answerBuyerResponse = int.Parse(buyerResponse)-1;
 
             Home ChosenHome = Home.HomeList[answerBuyerResponse];
             //Remove selection from the list

@@ -48,7 +48,7 @@ namespace OpenHouseProject.AMJ
             string finalHouseName = "The Abandoned Split Level Filled with Australian Vampires";
             string finalHouseDescription = "It has a beautiful fence to contain all of your CRAZY relatives. It doesn't come with a mancave but it does have a man in the basement. The previous owners were Do It Yourselfers! The highend gas stove is already installed and conveniently located on the master bed.";
             string finalBestHouseFeature = "the master toilet is located on the ceiling. It is an very popular trend in new construction!";
-            string finalBuyThisHomeResponse = "Congratualtions the asking price was $390,000 and we just put it undercontract for you at 3.9 Billion! What a steal! ";
+            string finalBuyThisHomeResponse = "Congratualtions the asking price was $390,000 and we just put it undercontract for you at 9 Billion! What a steal! ";
 
 
             Realtor realtor = new Realtor();
@@ -58,7 +58,7 @@ namespace OpenHouseProject.AMJ
 
             //Show list of homes to see
             realtor.ShowHomes();
-            
+
             Console.WriteLine("I really think this is the house that you have been looking for after 399 months of house hunting. Do you want to see it? Y or N");
 
 
@@ -71,17 +71,24 @@ namespace OpenHouseProject.AMJ
             }
             else
             {
-                realtor.Speak("Too bad, your going to look at this house because I need a sale! This house is called the " + finalHouseName + finalHouseDescription + "It's best feature is " + finalBestHouseFeature + " " + finalBuyThisHomeResponse);
+                realtor.Speak("Too bad, your going to look at this house because I need a sale! This house is called the " + finalHouseName +" "+ finalHouseDescription +" "+ "It's best feature is " + finalBestHouseFeature + " " + finalBuyThisHomeResponse);
             }
 
-            realtor.Speak("I made a video of your home buying experience. Take a look?");
+            realtor.Speak("I made a video of your home buying experience. Are you ready to see it? Y/N");
 
-            string url = "https://youtu.be/Ntz8KxCxgGQ";
-            System.Diagnostics.Process.Start(url);
+            string finalChoiceResponse2 = Console.ReadLine();
+            string finalChoice2 = finalChoiceResponse2.ToUpper();
 
-            
-            
-            
+
+            if (finalChoice2 == "Y")
+            {
+                System.Diagnostics.Process.Start("cmd", "/C start " + "https://youtu.be/Ntz8KxCxgGQ ");
+            }
+            else
+            {
+                System.Diagnostics.Process.Start("cmd", "/C start " + "https://youtu.be/Ntz8KxCxgGQ ");
+            }
+
         }
 
            
